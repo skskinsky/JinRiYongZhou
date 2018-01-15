@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_bar_two"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@null">
+
+        <ImageView
+            android:id="@+id/command_return"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/dt_standard_index_nav_back" />
+
+        <TextView
+            android:id="@+id/command_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/TextBlackColor"
+            android:textSize="@dimen/common_titlebar_size" />
+
+        <ImageView
+            android:id="@+id/command_share"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:src="@drawable/dt_standard_news_share" />
+
+        <ImageView
+            android:id="@+id/command_sc"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/command_share"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:visibility="gone"
+            android:src="@drawable/news_sc_v2" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/title_splite_color" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+
+</LinearLayout>

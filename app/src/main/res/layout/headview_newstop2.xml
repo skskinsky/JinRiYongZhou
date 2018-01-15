@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:f="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="14px"
+        android:background="@color/headview_splite_color" />
+
+    <ImageView
+        android:id="@+id/topicslogo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_icon" />
+
+    <TextView
+        android:id="@+id/topicsname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/TextBlackColor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/remake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="3"
+        android:textColor="@color/Text40GreyColor"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/tv_dingyue"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="订阅"
+            android:background="@color/common_color"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:padding="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            />
+        <TextView
+            android:id="@+id/tv_tougao"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="投稿"
+            android:background="@color/common_color"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+
+    <com.dingtai.base.view.TagListView
+        android:id="@+id/tagview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15.0dip"
+        f:horizontalSpacing="20dp"
+        f:orientation="horizontal"
+        f:verticalSpacing="10dp" />
+
+</LinearLayout>

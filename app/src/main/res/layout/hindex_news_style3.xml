@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_body_bg"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/lvItem_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <com.dingtai.base.view.BaseTextView
+                android:id="@+id/txtNewsTitleStyle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="7dp"
+                android:lineSpacingExtra="3dp"
+                android:maxLines="2"
+                android:text="副标题 副标题 副标题 副标题 副标题 副标题 副标题 副标题 副标题 副标题 "
+                android:textColor="@color/common_list_titlebar_font"
+                android:textSize="@dimen/news_main_title_size" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtNewsTitleStyle3" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="3dp" >
+
+                    <com.dingtai.base.view.BaseTextView
+                        android:id="@+id/txtNewsSubscriptStyle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="7dp"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="角标"
+                        android:visibility="invisible"
+                        android:textColor="#31c37c"
+                        android:textSize="@dimen/index_subscript_size" />
+
+                    <com.dingtai.base.view.BaseTextView
+                        android:id="@+id/txtypeStyle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="12dp"
+                        android:layout_toLeftOf="@id/txtNewsSubscriptStyle3"
+                        android:drawableLeft="@drawable/list_reply"
+                        android:gravity="center_vertical"
+                        android:text="  99"
+                        android:textColor="@color/news_list_other_font"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <com.dingtai.base.view.BaseTextView
+                        android:id="@+id/txtNewsReviewStyle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="7dp"
+                        android:drawableLeft="@drawable/list_reply"
+                        android:gravity="center"
+                        android:text="角标"
+                        android:textColor="@color/news_list_other_font"
+                        android:textSize="@dimen/index_subscript_size"
+                        android:visibility="gone" />
+
+                    <com.dingtai.base.view.BaseTextView
+                        android:id="@+id/txtNewsZanStyle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toRightOf="@id/txtNewsReviewStyle3"
+                        android:drawableLeft="@drawable/dt_standard_shouye_shijian"
+                        android:gravity="center_vertical"
+                        android:text=" 99"
+                        android:visibility="invisible"
+                        android:textColor="@color/news_list_other_font"
+                        android:textSize="@dimen/index_subscript_size" />
+                </RelativeLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/dt_list_item_underline" />
+    </LinearLayout>
+
+</LinearLayout>

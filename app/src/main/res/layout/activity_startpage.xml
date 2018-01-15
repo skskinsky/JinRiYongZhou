@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rlBg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/mViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/imgBig"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rlTitle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="#44000000"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgBG"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/dt_standard_setting_settingindex_arrowbtnimg"/>
+
+                <TextView
+                    android:id="@+id/txtSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/imgBG"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@+id/imgBG"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="标题"
+                    android:textColor="#fff"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="8dp"
+                android:background="@drawable/startpage_text_view_border"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/imgGoTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="跳过"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+                <!--   <TextView
+                      android:id="@+id/autoGoTo"
+                      android:layout_width="48dp"
+                      android:layout_height="32dp"
+                      android:layout_marginLeft="2dp"
+                      android:layout_toRightOf="@id/imgGoTo"
+                      android:gravity="center"
+                      android:textColor="#EBC000"
+                      android:text="5"
+                      android:textSize="14sp" /> -->
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF">
+
+        <ImageView
+            android:id="@+id/imgCopyright"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/startpagebottom"/>
+    </LinearLayout>
+
+</LinearLayout>

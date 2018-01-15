@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lvItem_layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp">
+
+            <com.dingtai.base.view.BaseTextView
+                android:id="@+id/txtPictureTitleStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp"
+                android:text="副标题 副标题 副标题 副标题 副标题 副标题 副标题 副标题 副标题 副标题 "
+                android:textColor="@color/common_list_titlebar_font"
+                android:textSize="@dimen/news_main_title_size" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgPictureList1Style2"
+                    android:layout_width="@dimen/news_line_image_width"
+                    android:layout_height="@dimen/news_line_image_height"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/imgPictureList2Style2"
+                    android:layout_width="@dimen/news_line_image_width"
+                    android:layout_height="@dimen/news_line_image_height"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/imgPictureList3Style2"
+                    android:layout_width="@dimen/news_line_image_width"
+                    android:layout_height="@dimen/news_line_image_height"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imgPictureList3Style2"
+                android:layout_below="@id/txtPictureTitleStyle2">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp">
+
+                    <com.dingtai.base.view.BaseTextView
+                        android:id="@+id/txtypeStyle6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="7dp"
+                        android:gravity="center"
+                        android:text="苏仙区"
+                        android:textColor="@color/news_list_other_font"
+                        android:textSize="@dimen/index_subscript_size" />
+
+                    <com.dingtai.base.view.BaseTextView
+                        android:id="@+id/txtPictureSubscriptStyle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toRightOf="@+id/txtypeStyle6"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:paddingBottom="1dp"
+                        android:paddingTop="1dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="角标"
+                        android:textColor="#6481C7"
+                        android:textSize="10sp" />
+
+                    <com.dingtai.base.view.BaseTextView
+                        android:id="@+id/txtPictureReviewStyle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:drawableLeft="@drawable/list_reply"
+                        android:gravity="center_vertical"
+                        android:text=" 99"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/news_list_other_font"
+                        android:textSize="@dimen/index_subscript_size"
+                        android:visibility="visible" />
+
+                    <com.dingtai.base.view.BaseTextView
+                        android:id="@+id/txtPictureZanStyle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/txtPictureReviewStyle2"
+                        android:drawableLeft="@drawable/coll_yd"
+                        android:gravity="center_vertical"
+                        android:text=" 99"
+                        android:textColor="@color/news_list_other_font"
+                        android:textSize="@dimen/index_subscript_size"
+                        android:visibility="visible" />
+
+                    <com.dingtai.base.view.BaseTextView
+                        android:id="@+id/txtPictureNumStyle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="12dp"
+                        android:layout_toLeftOf="@+id/txtPictureZanStyle2"
+                        android:text="0 图"
+                        android:textColor="@color/news_list_other_font"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+         <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dt_list_item_underline" />
+    -->
+
+</LinearLayout>

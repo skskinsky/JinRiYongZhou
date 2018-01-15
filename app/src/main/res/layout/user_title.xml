@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_bar_two"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="40dp"
+        >
+
+        <ImageButton
+            android:id="@+id/command_return"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:src="@drawable/dt_standard_index_nav_back" />
+
+        <TextView
+            android:id="@+id/command_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="商家详情"
+            android:textColor="#fff"
+            android:visibility="gone"
+            android:textSize="@dimen/common_titlebar_size" />
+
+        <ImageButton
+            android:id="@+id/command_more"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:src="@drawable/dt_standard_usercenter_userindex_settingbtnimg"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/bianji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:text="编辑"
+            android:textColor="@color/common_color"
+            android:layout_marginRight="15dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/command_gentie"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip"
+            android:layout_toLeftOf="@id/command_more"
+            android:gravity="center_vertical"
+            android:text="151跟帖"
+            android:textColor="@color/common_color"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</LinearLayout>

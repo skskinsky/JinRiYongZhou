@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dingtai.jinriyongzhou.view.RoundRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/item_active_radio_5"
+    android:orientation="vertical"
+    app:roundLayoutRadius="5dp">
+
+    <ImageView
+        android:id="@+id/mLogoIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/mTitleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#aa000000"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="6dp"
+        android:paddingLeft="3dp"
+        android:paddingTop="6dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
+
+</com.dingtai.jinriyongzhou.view.RoundRelativeLayout>

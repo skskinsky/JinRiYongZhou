@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:src="@drawable/dt_standard_index_nav_back" />
+
+
+        <com.dingtai.base.view.BaseTextView
+            android:id="@+id/tv_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="公积金查询"
+            android:textSize="@dimen/common_titlebar_size" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        android:textColor="@android:color/holo_blue_dark"
+        android:drawableLeft="@drawable/dt_xingming"
+        android:drawablePadding="3dp"
+        android:textSize="20sp"
+        android:padding="5dp"
+        />
+
+    <EditText
+        android:id="@+id/et_xingming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:background="@drawable/edit_bg1"
+        android:maxLines="1"
+        android:inputType="textUri|textMultiLine"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="身份证"
+        android:textColor="@android:color/holo_blue_dark"
+        android:drawableLeft="@drawable/dt_shenfenzheng"
+        android:drawablePadding="3dp"
+        android:textSize="20sp"
+        android:padding="5dp"
+        />
+
+    <EditText
+        android:id="@+id/et_shenfenzheng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:background="@drawable/edit_bg1"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="查      询"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/gongjijin_commit"
+        android:textColor="@drawable/gongjijin_commit_text"
+        android:textSize="20sp"/>
+
+
+</LinearLayout>

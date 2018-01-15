@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_body_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp">
+
+        <ImageView
+            android:id="@+id/title_bar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:src="@drawable/dt_standard_index_nav_back" />
+
+        <ImageView
+            android:id="@+id/title_bar_right_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:src="@drawable/dt_standard_signin_user"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_center"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title_bar_center"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="我的发布"
+                android:visibility="gone"
+                android:textColor="@color/Text4CGreyColor"
+                android:textSize="@dimen/common_titlebar_size" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="我的发布"
+                android:textColor="@color/Text4CGreyColor"
+                android:textSize="@dimen/common_titlebar_size" />
+            <ImageView
+                android:id="@+id/centerimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scaleType="center" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/setting_underline"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/setting_underline"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/no_mybaoliao_baoliao"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/dt_standard_baoliao_baoliaolist_night_yinying"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="152dp"
+            android:background="@drawable/dt_standard_baoliao_baoliaolist_night_wenzi"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/my_baoliao_jiantou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageView1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="77dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/dt_standard_baoliao_baoliaolist_night_jiantou" />
+
+        <ImageView
+            android:id="@+id/mybaoliao_baoliao_btn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/mybaoliao_baoliao" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mybaoliao_baoliao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f2f2f2">
+
+            <com.dingtai.base.pullrefresh.PullToRefreshListView
+                android:id="@+id/baoliao_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:divider="@null"
+                android:dividerHeight="15dp"
+                android:focusable="false"
+                android:scrollbars="none" />
+
+            <FrameLayout
+                android:id="@+id/reload_tips"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:visibility="gone">
+
+                <include
+                    layout="@layout/onclick_reload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/mybaoliao_baoliao_btn1"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/mybaoliao_baoliao1" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

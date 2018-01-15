@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_body_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llNewsBanner1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imgBanner"
+            android:layout_width="fill_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/common_body_bg" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="4dp"
+            android:background="@color/common_body_bg" >
+
+            <com.dingtai.base.view.BaseTextView
+                android:id="@+id/tvZhiBoJiaoBiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="  正在直播"
+                android:textColor="@color/common_color"
+                android:textSize="14sp" />
+
+            <com.dingtai.base.view.BaseTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@id/tvZhiBoJiaoBiao"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="1"
+                android:text="副标题 副标题 副标题 副标题 副标题 副标题 副标题 副标题 副标题 副标题 "
+                android:textColor="@color/common_list_titlebar_font"
+                android:textSize="@dimen/news_main_title_size" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" >
+
+                <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/tvSubscript"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/news_bendi"
+                    android:gravity="center"
+                    android:text="角标"
+                    android:textColor="#6481C7"
+                    android:textSize="@dimen/index_subscript_size"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+<!--         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp" /> -->
+    </LinearLayout>
+
+</LinearLayout>

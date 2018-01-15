@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_body_bg" >
+
+    <RelativeLayout
+        android:id="@+id/myTitleBarId"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/common_body_bg" >
+
+        <ImageView
+            android:id="@+id/title_bar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/navbar_icon_cancel" />
+
+        <ImageView
+            android:id="@+id/title_bar_right_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/navbar_icon_submit" />
+
+        <TextView
+            android:id="@+id/pinglunshu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="专家教授"
+            android:drawableEnd="@drawable/bar_spinner_default"
+            android:textColor="@color/common_color"
+            android:textSize="16sp"
+            android:drawableRight="@drawable/bar_spinner_default" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/baoliao_release_select"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@color/common_body_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ddd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/baoliao_release_picture"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/dt_standard_problem_photo" />
+
+            <ImageButton
+                android:id="@+id/baoliao_release_audio"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/dt_standard_problem_voice"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/baoliao_release_video"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/dt_standard_problem_video" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/baoliao_release_select"
+        android:layout_below="@id/myTitleBarId"
+        android:background="#f2f2f2"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/rlBaoliaoreleaseCall"
+                        android:layout_width="fill_parent"
+                        android:layout_height="36dp"
+                        android:background="@color/cjrb_theme_color" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/ivBaoliaoCall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/dt_baoliao_release_call" />
+
+                            <TextView
+                                android:id="@+id/tvBaoliaoCall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/ivBaoliaoCall"
+                                android:text="爆料热线："
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dt_sub_channel_16" />
+
+                            <TextView
+                                android:id="@+id/tvBaoliaoCallValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_toRightOf="@+id/tvBaoliaoCall"
+                                android:text="02785896138"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dt_sub_channel_16" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="一经采纳，根据新闻线索价值支付酬劳"
+                        android:textColor="@color/cjrb_theme_color"
+                        android:textSize="@dimen/dt_sub_channel_16" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/baoliao_release_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/setting_underline"
+                android:orientation="vertical"
+                android:padding="1dp" >
+
+                <EditText
+                    android:id="@+id/baoliao_release_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:hint="请输入互动问题"
+                    android:minLines="8"
+                    android:padding="5dp"
+                    android:background="@null"
+                    android:textColor="@color/Text60GreyColor"
+                    android:textSize="@dimen/dt_sub_channel_16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/setting_underline" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/setting_underline" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#d2d2d2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/baoliao_release_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"                    
+                        android:background="#d2d2d2"
+                        android:drawableLeft="@drawable/carpark_info_add"
+                        android:drawablePadding="5dp"
+                        android:gravity="center|left"
+                        android:minWidth="200dp"
+                        android:text="定位中..."
+                        android:singleLine="true"
+                    	android:ellipsize="marquee"
+                        android:textColor="@color/cjrb_theme_color"
+                        android:textSize="@dimen/dt_sub_channel_16" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbIsAnonymous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@drawable/checkbox_biaoliao_is_niming"
+                android:text="匿名爆料"
+                android:textColor="@color/Text40GreyColor"
+                android:textSize="@dimen/dt_sub_channel_16"
+                android:visibility="gone" />
+
+            <com.dingtai.base.view.MyGridView
+                android:id="@+id/baoliao_release_media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/baoliao_release_main"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:horizontalSpacing="3dip"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="3"
+                android:padding="1dp"
+                android:verticalSpacing="5dp" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/baoliao_release_media"
+                android:layout_marginTop="10dp"
+                android:progress="0"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_body_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/my_title_bar"
+        android:visibility="gone"
+        />
+
+    <include layout="@layout/check_network" />
+
+    <com.dingtai.base.pullrefresh.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderTextColor="#666666"
+        ptr:ptrMode="pullFromStart">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/institution_detail_background">
+
+                <com.dingtai.base.view.CircularImage
+                    android:id="@+id/leader_icon"
+                    android:layout_width="70dip"
+                    android:layout_height="70dip"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dt_standard_index_news_bg" />
+
+                <TextView
+                    android:id="@+id/institution_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/news_main_title_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_dingyue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订阅"
+                    android:background="@color/common_color"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                 />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_tougao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="投稿"
+                    android:background="@color/common_color"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/introduce_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="2dp"
+                android:text="你好你好你好"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/ad_news"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/news_adtitle_top"
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dip">
+
+                    <com.dingtai.base.view.MyAdGallery
+                        android:id="@+id/adgallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dip"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="0dip" />
+
+                    <TextView
+                        android:id="@+id/ad_image_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/dt_standard_news_newslist_adflagimg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="新闻"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <LinearLayout
+                        android:id="@+id/ad_title_linear"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dip"
+                        android:layout_alignParentBottom="true"
+                        android:background="#4000"
+                        android:orientation="horizontal"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:id="@+id/adtitle"
+                            android:layout_width="0dip"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="5dp"
+                            android:text="标题"
+                            android:textColor="#fff"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:id="@+id/ovalLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dip"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="3dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"></LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:text=""
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="领导专区"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/dt_list_item_underline" />
+
+            <!--
+             <LinearLayout
+            android:id="@+id/ll_indexmodel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_body_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+
+
+
+
+
+
+
+            -->
+
+            <com.dingtai.base.view.MyGridView
+                android:id="@+id/gv_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:horizontalSpacing="0dp"
+                android:listSelector="#00000000"
+                android:numColumns="3"
+                android:visibility="gone"></com.dingtai.base.view.MyGridView>
+            <!-- </LinearLayout> -->
+
+            <LinearLayout
+                android:id="@+id/ad_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_politics_toutiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/dt_standard_zhengwu_zhengwu"
+                    android:gravity="center_vertical" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/dt_list_item_underline" />
+
+                <com.dingtai.base.view.VerticalScrollTextView
+                    android:id="@+id/scroll_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/dt_standard_zhengwu_zuixinxinwen" />
+
+                    <TextView
+                        android:id="@+id/tv_more_news"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginRight="10dp"
+                        android:drawableRight="@drawable/dt_standard_zhengwu_toright"
+                        android:text="全部"
+                        android:textColor="#c0c0c0"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <com.dingtai.base.view.MyListView
+                    android:id="@+id/lv_lastessay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:listSelector="#00ffffff"></com.dingtai.base.view.MyListView>
+                <!-- <ImageView -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_gravity="center" -->
+                <!-- android:background="@drawable/dt_standard_zhengwu_diandian" /> -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/dt_standard_shouye_zuixintiwen" />
+
+                    <TextView
+                        android:id="@+id/tv_more_ask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginRight="10dp"
+                        android:drawableRight="@drawable/dt_standard_zhengwu_toright"
+                        android:text="全部"
+                        android:textColor="#c0c0c0"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <com.dingtai.base.view.MyListView
+                    android:id="@+id/lv_lastquestion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:listSelector="#00ffffff"></com.dingtai.base.view.MyListView>
+            </LinearLayout>
+
+            <!-- <ImageView -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_gravity="center_horizontal" -->
+            <!-- android:background="@drawable/dt_standard_zhengwu_zuixintiwen" /> -->
+
+
+            <!--
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </android.support.v4.view.ViewPager>
+
+
+
+
+
+
+
+            -->
+            <!-- <FrameLayout -->
+            <!-- android:id="@+id/last_framelayout" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" > -->
+            <!-- </FrameLayout> -->
+        </LinearLayout>
+    </com.dingtai.base.pullrefresh.PullToRefreshScrollView>
+
+    <!-- </ScrollView> -->
+
+</LinearLayout>

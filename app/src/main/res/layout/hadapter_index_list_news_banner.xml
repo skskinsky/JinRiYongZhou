@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/first_news"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llNewsBanner1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dt_list_item_background"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="165dp"
+            android:background="@color/common_body_bg" >
+
+            <ImageView
+                android:id="@+id/imgBanner_news"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="fitXY" />
+
+            <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/tvSubscript"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:text="角标"
+                    android:visibility="gone"
+                    android:textColor="#6481C7"
+                    android:textSize="10sp" />
+            
+            <ImageView
+                android:id="@+id/img_play"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/dt_standard_news_newslist_smallpicimg_playbtnimg"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:background="@color/common_body_bg"
+            android:orientation="vertical" >
+
+            <com.dingtai.base.view.BaseTextView
+                android:id="@+id/tvTitle_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginLeft="5dp"
+                android:maxLines="2"
+                android:textColor="@color/common_list_titlebar_font"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="7dp"
+                android:visibility="gone"
+                android:layout_marginTop="5dp" >
+
+
+                <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/txtypeStyle8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="7dp"
+                    android:gravity="center"
+                    android:text="角标"
+                    android:textColor="@color/item_zhibo"
+                    android:textSize="@dimen/index_subscript_size"
+                    android:visibility="gone" />
+
+                <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/tvZan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/txtypeStyle8"
+                    android:drawableLeft="@drawable/list_dianzan"
+                    android:gravity="center_vertical"
+                    android:text="  99"
+                    android:textColor="@color/common_list_titlebar_fu_font"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/tvReply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/tvZan"
+                    android:drawableLeft="@drawable/list_reply"
+                    android:gravity="center_vertical"
+                    android:text="  99"
+                    android:textColor="@color/common_list_titlebar_fu_font"
+                    android:textSize="@dimen/index_subscript_size" />
+
+                <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tvReply"
+                    android:drawableLeft="@drawable/dt_standard_shouye_shijian"
+                    android:gravity="center_vertical"
+                    android:text=" 5分钟前"
+                    android:textColor="@color/common_list_titlebar_fu_font"
+                    android:textSize="@dimen/index_subscript_size" />
+            </RelativeLayout>
+        </LinearLayout>
+
+<!--         <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/dt_list_item_underline" /> -->
+    </LinearLayout>
+
+</LinearLayout>

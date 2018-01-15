@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+android {
+    signingConfigs {
+        release {
+            keyAlias 'android.keystoreasp'
+            keyPassword '123456'
+            storeFile file('C:/Users/Administrator/Desktop/key_store/android.keystore')
+            storePassword '123456'
+        }
+    }
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.dingtai.jinriyongzhou"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+}
+repositories {
+    maven {
+        url 'http://192.168.0.110:5984/nexus/content/repositories/releases/'
+    }
+    maven {
+        url 'http://192.168.0.110:5984/nexus/content/repositories/snapshots/'
+    }
+}
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 1, 'minutes'
+}
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'com.dingtai:ScanLib:1.0.0-SNAPSHOT'
+    compile 'com.dingtai:NewLib3.0:2.0.0-SNAPSHOT'
+    compile 'com.dingtai:UserCenterLib:1.0.9-SNAPSHOT'
+    compile 'com.dingtai:SearchLib:1.0.0-SNAPSHOT'
+    compile 'com.dingtai:FlashLib:1.0.0-SNAPSHOT'
+    compile 'com.dingtai:BusLib:1.0.0-SNAPSHOT'
+    compile 'com.dingtai:LoginLib:1.0.4-SNAPSHOT'
+    compile 'com.dingtai:SettingLib:1.0.1-SNAPSHOT'
+    compile 'com.dingtai:ActivitiesLib:1.0.1-SNAPSHOT'
+    compile 'com.dingtai:WeatherLib:1.0.1-SNAPSHOT'
+    compile 'com.dingtai:BaoLiaoLib:1.0.5-SNAPSHOT'
+    compile 'com.dingtai:ShakeLib:1.0.1-SNAPSHOT'
+    compile 'com.dingtai:VodLib:1.0.1-SNAPSHOT'
+    compile 'com.dingtai:LiveLib:1.0.5-SNAPSHOT'
+    compile 'com.dingtai:pushLive:0.0.2-SNAPSHOT'
+    compile 'com.dingtai:TrafficLib:1.0.0-SNAPSHOT'
+    compile 'com.dingtai:PoliticsLib:1.0.0-SNAPSHOT'
+    compile 'com.dingtai:MutualLib:1.0.1-SNAPSHOT'
+    compile 'com.dingtai:reporter:0.0.2-SNAPSHOT'
+    compile 'com.android.support:design:23.4.0'
+
+}

@@ -1,0 +1,153 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/title_bar_two"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@null">
+
+        <ImageView
+            android:id="@+id/command_return"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/dt_standard_index_nav_back" />
+
+        <TextView
+            android:id="@+id/command_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="@color/TextBlackColor"
+            android:textSize="@dimen/common_titlebar_size"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/title_splite_color" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <com.dingtai.jinriyongzhou.view.DrawableCenterTextView
+                android:id="@+id/zhibojian_share"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/baoliao_fenxiang"
+                android:drawablePadding="7dp"
+                android:gravity="center_vertical"
+                android:text="分享"
+                android:textColor="@color/Text60GreyColor"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/usercenter_splite_color" />
+
+            <com.dingtai.jinriyongzhou.view.DrawableCenterTextView
+                android:id="@+id/zhibojian_comment"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/baoliao_pinglun"
+                android:drawablePadding="7dp"
+                android:gravity="center_vertical"
+                android:text="评论"
+                android:textColor="@color/Text60GreyColor"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/usercenter_splite_color" />
+
+            <com.dingtai.jinriyongzhou.view.DrawableCenterTextView
+                android:id="@+id/zhibojian_zan"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/baoliao_dianzan"
+                android:drawablePadding="7dp"
+                android:gravity="center_vertical"
+                android:text=" 99"
+                android:textColor="@color/Text60GreyColor"
+                android:textSize="14sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivzhibotitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/dt_standard_index_news_bg" />
+
+        <com.dingtai.base.pullrefresh.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_refresh_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/bottom_layout"
+            android:layout_below="@+id/ivzhibotitle"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollbars="none"
+            ptr:ptrHeaderTextColor="@color/common_list_titlebar_font"
+            ptr:ptrMode="both">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="14px"
+                    android:background="@color/headview_splite_color" />
+
+
+                <com.dingtai.base.view.MyListView
+                    android:id="@+id/listviewzhibo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:fadingEdge="none"
+                    android:listSelector="#00ffffff"
+                    android:scrollbars="none"
+                    android:scrollingCache="false" />
+            </LinearLayout>
+        </com.dingtai.base.pullrefresh.PullToRefreshScrollView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@id/bottom_layout"
+            android:background="@color/home_line_color" />
+    </RelativeLayout>
+
+</LinearLayout>

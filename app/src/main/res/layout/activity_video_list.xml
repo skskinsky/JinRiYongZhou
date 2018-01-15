@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_body_bg"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/my_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:id="@+id/rela_anren"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"></RelativeLayout>
+
+    <com.dingtai.base.pullrefresh.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/headview_splite_color"
+        android:scrollbars="none"
+
+
+        ptr:ptrHeaderTextColor="#666666"
+        ptr:ptrMode="both">
+
+        <com.dingtai.base.view.MyGridView
+            android:id="@+id/gv_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gridview_splite_color"
+            android:horizontalSpacing="2px"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="2"
+            android:paddingTop="14px" />
+    </com.dingtai.base.pullrefresh.PullToRefreshScrollView>
+
+</LinearLayout>

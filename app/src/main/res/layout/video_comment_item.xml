@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+		<!-- 日期时间 -->
+        <TextView
+            android:id="@+id/tv_comment_item_date"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+         	android:padding="7dp"
+         	android:textColor="#000"
+            android:layout_marginTop="30dp"
+            android:text="0秒前" />
+      
+		<!-- 时间轴 -->
+        <RelativeLayout
+            android:id="@+id/fl_comment_item_time_axis"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/tv_comment_item_date" >
+			<!-- 轴 -->
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:background="#f4f4f4" />
+			<!-- 轴上面的标记 -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+             	android:layout_marginTop="45dp"
+                android:src="@drawable/time_axis_mark"
+                android:visibility="gone" />
+            <com.dingtai.base.view.CircularImage
+                android:id="@+id/comment_portrait"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="32dp"
+               />
+        </RelativeLayout>
+   
+            <!-- 标题 -->
+            <TextView
+                android:id="@+id/tv_comment_item_nickname_and_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+	            android:layout_marginTop="40dp"
+	            android:paddingRight="10dp"
+	            android:textColor="#000"
+	            android:layout_toRightOf="@+id/fl_comment_item_time_axis"
+                android:text="随心所欲：评论评论" />
+
+    </RelativeLayout>
+
+</LinearLayout>

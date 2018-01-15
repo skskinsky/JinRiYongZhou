@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="48dp" >
+
+        <RelativeLayout
+            android:id="@+id/command_return"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/dt_standard_index_nav_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/command_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="模块"
+            android:textColor="@color/TextBlackColor"
+            android:textSize="@dimen/common_titlebar_size" />
+
+        <TextView
+            android:id="@+id/fuwu_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:text="定制"
+            android:textColor="@color/common_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/title_splite_color" />
+
+    <com.dingtai.base.pullrefresh.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+       
+     
+        ptr:ptrHeaderTextColor="@color/Text40GreyColor"
+        ptr:ptrMode="pullFromStart" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#F5F5F5"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="资讯"
+                android:textColor="@color/Text60GreyColor"
+                android:textSize="18sp" />
+
+            <com.dingtai.base.view.MyGridView
+                android:id="@+id/gv_news"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:verticalSpacing="20dp" >
+            </com.dingtai.base.view.MyGridView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="视听"
+                android:textColor="@color/Text60GreyColor"
+                android:textSize="18sp" />
+
+            <com.dingtai.base.view.MyGridView
+                android:id="@+id/gv_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:verticalSpacing="20dp" >
+            </com.dingtai.base.view.MyGridView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="互动"
+                android:textColor="@color/Text60GreyColor"
+                android:textSize="18sp" />
+
+            <com.dingtai.base.view.MyGridView
+                android:id="@+id/gv_interactive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:verticalSpacing="20dp" >
+            </com.dingtai.base.view.MyGridView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="出行"
+                android:textColor="@color/Text60GreyColor"
+                android:textSize="18sp" />
+
+            <com.dingtai.base.view.MyGridView
+                android:id="@+id/gv_travel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:verticalSpacing="20dp" >
+            </com.dingtai.base.view.MyGridView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="电商"
+                android:textColor="@color/Text60GreyColor"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <com.dingtai.base.view.MyGridView
+                android:id="@+id/gv_business"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:verticalSpacing="20dp"
+                android:visibility="gone" >
+            </com.dingtai.base.view.MyGridView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="便民"
+                android:textColor="@color/Text60GreyColor"
+                android:textSize="18sp" />
+
+            <com.dingtai.base.view.MyGridView
+                android:id="@+id/gv_convenience"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:verticalSpacing="20dp" >
+            </com.dingtai.base.view.MyGridView>
+        </LinearLayout>
+    </com.dingtai.base.pullrefresh.PullToRefreshScrollView>
+
+</LinearLayout>

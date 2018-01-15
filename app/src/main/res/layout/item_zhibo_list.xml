@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="#999999" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="04/14"
+                android:textColor="@color/Text60GreyColor"
+                android:textScaleX="1.2"
+                android:textSize="22sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:paddingRight="15dp"
+            android:text="周五"
+            android:textColor="@color/Text60GreyColor"
+            android:textSize="16sp"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llitem1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivitem1img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/dt_standard_index_news_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tvitem1type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/bac_green"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="正在直播"
+                    android:textColor="@color/common_color"
+                    android:textSize="@dimen/dt_zhibo_zhuangtai_text_size"
+                    android:typeface="sans"
+                    android:visibility="gone" />
+                <!-- android:layout_marginLeft="10dp" -->
+
+                <TextView
+                    android:id="@+id/tvitem1title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/tvitem1type"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:text="欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导"
+                    android:textColor="@color/common_list_titlebar_font"
+                    android:textSize="@dimen/common_titlebar_fu_size"
+                    android:typeface="sans" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dt_list_item_underline" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llitem2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivitem2img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/dt_standard_index_news_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvitem2type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/bac_green"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="正在直播"
+                    android:textColor="@color/common_color"
+                    android:textSize="@dimen/dt_zhibo_zhuangtai_text_size"
+                    android:typeface="sans"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvitem2title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:text="欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导欧盟领导"
+                    android:textColor="@color/TextBlackColor"
+                    android:textSize="16sp"
+                    android:typeface="sans" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvitem2detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                android:text="欧盟领导"
+                android:textColor="@color/Text40GreyColor"
+                android:textSize="13sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/tvitem2time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:maxLines="1"
+                android:text="欧盟领导"
+                android:textColor="@color/Text40GreyColor"
+                android:textSize="13sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llitem3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dt_list_item_background"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/common_body_bg">
+
+                <ImageView
+                    android:id="@+id/ivitem3img"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dt_standard_index_news_bg" />
+
+                <TextView
+                    android:id="@+id/tvitem3title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/ivitem3img"
+                    android:maxLines="1"
+                    android:text="欧盟领导"
+                    android:textColor="@color/common_list_titlebar_font"
+                    android:textSize="16sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tvitem3detail"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvitem3title"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/ivitem3img"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:paddingTop="5dp"
+                    android:text="简介"
+                    android:textColor="@color/common_list_titlebar_fu_font"
+                    android:textSize="@dimen/index_content_desc_size"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tvitem3type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bac_green"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="正在直播"
+                    android:textColor="@color/common_color"
+                    android:textSize="@dimen/dt_zhibo_zhuangtai_text_size"
+                    android:typeface="sans" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dt_list_item_underline" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

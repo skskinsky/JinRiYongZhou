@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DB>
+    <name>com.dingtai.dtflash.model.OpenPicModel</name>
+    <name>com.dingtai.base.model.UserScoreList</name>
+    <name>com.dingtai.dtflash.model.StartPageModel</name>
+    <!-- 新闻表 -->
+    <name>com.dingtai.base.model.NewsListModel</name>
+    <name>com.dingtai.base.model.NewsPhotoModel</name>
+    <name>com.dingtai.newslib3.model.JournalistInfoModel</name>
+    <name>com.dingtai.newslib3.model.NewsDetailModel</name>
+    <name>com.dingtai.newslib3.model.RelatedNewsModel</name>
+    <name>com.dingtai.base.model.ADModel</name>
+    <name>com.dingtai.newslib3.model.NewsChannelModel</name>
+    <name>com.dingtai.newslib3.model.MoreChannelModel</name>
+    <name>com.dingtai.newslib3.model.ParentChannelModel</name>
+    <name>com.dingtai.newslib3.model.ChannelModel</name>
+    <name>com.dingtai.newslib3.model.NewsADModel</name>
+    <name>com.dingtai.newslib3.model.SubcribeModel</name>
+    <!--直播-->
+    <name>com.dingtai.base.livelib.model.LiveChannelModel</name>
+    <name>com.dingtai.base.livelib.model.LiveProgramListModel</name>
+    <!-- 用户相关表 -->
+    <name>com.dingtai.base.model.UserInfoModel</name>
+    <name>com.dingtai.base.model.UserChannelModel</name>
+    <name>com.dingtai.base.model.UserCollects</name>
+    <!--公交-->
+    <name>com.dingtai.model.BusInfo</name>
+    <name>com.dingtai.model.FangAnModel</name>
+    <name>com.dingtai.model.ZhanDianInfo</name>
+    <!--点播-->
+    <name>com.dingtai.dtvoc.model.VODChannelsContent</name>
+    <name>com.dingtai.dtvoc.model.VODChannelsProgram</name>
+    <name>com.dingtai.base.model.DigPai</name>
+    <name>com.dingtai.dtvoc.model.TuiJianProgram</name>
+    <!--爆料-->
+    <name>com.dingtai.dtbaoliao.model.RevelationClass</name>
+    <name>com.dingtai.dtbaoliao.model.BaoliaoModel</name>
+    <!--活动-->
+    <name>com.dingtai.base.model.ActiveModel</name>
+    <!--摇摇乐-->
+    <name>com.dingtai.dtshake.model.GiftBean</name>
+    <name>com.dingtai.dtshake.model.ScoreExchange</name>
+    <!--app版本-->
+    <name>com.dingtai.base.model.UpdateVersionModel</name>
+    <!--商城-->
+    <!--    <name>com.dingtai.dtshop.model.GoodsAreaListModel</name>
+        <name>com.dingtai.dtshop.model.GoodsIndexListModel</name>
+       <name>com.dingtai.dtshop.model.GoodsListModel</name>
+       <name>com.dingtai.dtshop.model.GoodsSearchHostoryModel</name>
+       <name>com.dingtai.dtshop.model.GoodsTypeModel</name>
+       <name>com.dingtai.dtshop.model.RegisterUserContacts</name>-->
+    <!--首页-->
+    <name>com.dingtai.jinriyongzhou.model.CJIndexNewsListModel</name>
+    <name>com.dingtai.jinriyongzhou.model.IndexAD</name>
+    <name>com.dingtai.jinriyongzhou.model.IndexModel</name>
+    <name>com.dingtai.jinriyongzhou.model.MediaList</name>
+    <name>com.dingtai.jinriyongzhou.model.ModelZhiboDetail</name>
+    <name>com.dingtai.jinriyongzhou.model.ModelZhiboList</name>
+    <name>com.dingtai.jinriyongzhou.model.NewsADs</name>
+    <!--问政-->
+    <name>com.dingtai.dtpolitics.model.MyWenzhengModel</name>
+    <name>com.dingtai.dtpolitics.model.ProvinceAreaModel</name>
+</DB>

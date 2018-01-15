@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/my_content_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <include layout="@layout/new_title_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/ad_splite_color" />
+
+    <!-- 首页导航栏 -->
+
+    <LinearLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal" >
+
+    <!--     <com.dingtai.jinriyongzhou.view.tab.RecyclerTabLayout
+            android:id="@+id/recycler_tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone" /> -->
+
+        <com.dingtai.base.view.SyncHorizontalScrollView
+            android:id="@+id/mhsv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fadingEdge="none"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:id="@+id/rl_scroll"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical" >
+
+                <RadioGroup
+                    android:id="@+id/tab_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+                </RadioGroup>
+            </RelativeLayout>
+        </com.dingtai.base.view.SyncHorizontalScrollView>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@color/lanmu_splite_color" />
+
+        <ImageView
+            android:id="@+id/main_iv_right"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:padding="4dp"
+            android:src="@drawable/dt_standard_index_dingyue" >
+        </ImageView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/title_splite_color" />
+
+    <RelativeLayout
+        android:id="@+id/rela_anren"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bt_reload_dn" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_drawable"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/loading_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

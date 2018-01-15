@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Areas
+    areaId="HH"
+    areaTitle="地图"
+    desc="永州市地图" >
+
+    <Area
+        areaId="453"
+        areaTitle="冷水滩"
+        pts="333,33,421,33,421,69,333,69"
+        textX="377"
+        textY="60" />
+
+    <Area
+        areaId="458"
+        areaTitle="祁阳"
+        pts="604,147,692,147,692,183,604,183"
+        textX="648"
+        textY="174" />
+
+    <Area
+        areaId="457"
+        areaTitle="新田"
+        pts="604,305,692,305,692,341,604,341"
+        textX="648"
+        textY="332" />
+
+    <Area
+        areaId="455"
+        areaTitle="宁远"
+        pts="604,375,692,375,692,411,604,411"
+        textX="648"
+        textY="402" />
+
+    <Area
+        areaId="456"
+        areaTitle="蓝山"
+        pts="604,424,692,424,692,460,604,460"
+        textX="648"
+        textY="451" />
+
+    <Area
+        areaId="443"
+        areaTitle="江华"
+        pts="312,651,400,651,400,687,312,687"
+        textX="356"
+        textY="678" />
+
+    <Area
+        areaId="454"
+        areaTitle="江永"
+        pts="28,448,116,448,116,484,28,484"
+        textX="72"
+        textY="475" />
+
+    <Area
+        areaId="450"
+        areaTitle="道州"
+        pts="28,388,116,388,116,424,28,424"
+        textX="72"
+        textY="415" />
+
+    <Area
+        areaId="449"
+        areaTitle="双牌"
+        pts="28,290,116,290,116,326,28,326"
+        textX="72"
+        textY="317" />
+
+    <Area
+        areaId="452"
+        areaTitle="零陵"
+        pts="28,239,116,239,116,275,28,275"
+        textX="72"
+        textY="266" />
+
+    <Area
+        areaId="451"
+        areaTitle="东安"
+        pts="28,188,116,188,116,224,28,224"
+        textX="72"
+        textY="215" />
+
+
+</Areas>

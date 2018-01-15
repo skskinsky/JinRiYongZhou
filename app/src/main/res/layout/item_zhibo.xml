@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_body_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp" >
+
+        <TextView
+            android:id="@+id/tvzhibodate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015-7-27"
+            android:textColor="@color/common_list_titlebar_font"
+            android:textSize="16sp"
+            android:typeface="sans"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvzhibotime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tvzhibodate"
+            android:text="21:03"
+            android:visibility="gone"
+            android:textColor="@color/common_list_titlebar_font"
+            android:textSize="16sp"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="wrap_content" >
+
+         <com.dingtai.base.view.CircularImage
+                android:id="@+id/ivzhiboicon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_zhibo_icon" />
+
+            <TextView
+                android:id="@+id/tvzhiboname"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/ivzhiboicon"
+                android:layout_centerHorizontal="true"
+                android:text="直播员"
+                android:maxLines="1"
+                 android:typeface="sans"
+                android:textColor="@color/common_list_titlebar_font"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/tuwen_bg"
+                android:orientation="vertical"
+                android:padding="8dp" >
+
+                <TextView
+                    android:id="@+id/tvzhibotitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="标题"
+                     android:typeface="sans"
+                    android:textColor="@color/common_list_titlebar_font"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/tvdetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tvzhiboitem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:lineSpacingExtra="2dp"
+                             android:typeface="sans"
+                         	android:textColor="@color/Text40GreyColor"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btopentext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/tvzhiboitem"
+                            android:background="#00000000"
+                            android:textColor="@color/item_zhibo"
+                            android:textSize="@dimen/index_content_desc_size"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/medial_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/ivzhiboitem2"
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_launcher"
+                            android:visibility="gone" />
+
+                        <com.dingtai.base.view.IjkVideoView
+                            android:id="@+id/vvzhiboitem3"
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivzhiboitem3"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/zhibo_play"
+                            android:visibility="gone" />
+
+                        <ProgressBar
+                            android:id="@+id/pbzhiboitem4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlzhiboitem4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/tvzhiboitem4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:text="0:00"
+                            android:textColor="@color/common_list_titlebar_fu_font"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:layout_toLeftOf="@id/tvzhiboitem4"
+                            android:background="@drawable/zhibo_seekbar_background" >
+
+                            <ImageButton
+                                android:id="@+id/btzhiboitem4"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="3dp"
+                                android:background="@null"
+                                android:padding="8dp"
+                                android:src="@drawable/zhibo_seekbar_play" />
+
+                            <SeekBar
+                                android:id="@+id/sbitem4"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginRight="15dp"
+                                android:max="100"
+                                android:maxHeight="0.5dip"
+                                android:minHeight="0.1dip"
+                                android:thumbOffset="0dip" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/jiaobiao"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/tuwen_bg_jiao" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="20dp"
+        android:background="#000"
+        android:visibility="gone" />
+
+</LinearLayout>

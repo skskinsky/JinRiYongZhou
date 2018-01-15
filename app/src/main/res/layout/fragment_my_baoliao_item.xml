@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:background="@color/item_bg_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <com.dingtai.base.view.CircularImage
+            android:id="@+id/my_baoliao_head"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/my_baoliao_head">
+
+            <TextView
+                android:id="@+id/my_baoliao_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/TextBlackColor"
+                android:textSize="16sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/my_baoliao_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_baoliao_title"
+                android:textColor="@color/Text40GreyColor"
+                android:textSize="13sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/my_baoliao_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_baoliao_title"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/my_baoliao_name"
+                android:textColor="@color/grey"
+                android:textSize="13sp"
+                android:typeface="sans" />
+
+            <ImageView
+                android:id="@+id/release_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/my_baoliao_time"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/dt_standard_baoliao_mybaoliaolist_passedimg" />
+
+            <ImageView
+                android:id="@+id/release_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/my_baoliao_time"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@+id/release_status"
+                android:src="@drawable/dt_standard_baoliao_mybaoliaolist_accept" />
+
+            <TextView
+                android:id="@+id/my_baoliao_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/my_baoliao_time"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@id/release_accept"
+                android:clickable="true"
+                android:text="删除"
+                android:textColor="@color/common_color"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/my_baoliao_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingMultiplier="0.9"
+        android:maxLines="5"
+        android:textColor="@color/Text4CGreyColor"
+        android:textSize="16sp"
+        android:typeface="sans" />
+
+    <com.dingtai.base.view.MyGallery
+        android:id="@+id/baoliao_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:visibility="gone"
+        android:spacing="10dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/medial_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:scrollbars="none" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/home_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.dingtai.base.view.DrawableTextView
+            android:id="@+id/baoliao_share"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/baoliao_fenxiang"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="分享"
+            android:textColor="@color/Text60GreyColor"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/usercenter_splite_color" />
+
+        <com.dingtai.base.view.DrawableTextView
+            android:id="@+id/baoliao_comment"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/baoliao_pinglun"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="评论"
+            android:textColor="@color/Text60GreyColor"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/usercenter_splite_color" />
+
+        <com.dingtai.base.view.DrawableTextView
+            android:id="@+id/baoliao_zan"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/baoliao_dianzan"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text=" 99"
+            android:textColor="@color/Text60GreyColor"
+            android:textSize="14sp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/home_line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/release_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="发布时间："
+            android:textColor="@color/grey"
+            android:textSize="12dip"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/my_baoliao_release_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/release_text"
+            android:text="2014年12月3日17:43:46"
+            android:textColor="@color/grey"
+            android:textSize="12dip"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/my_baoliao_commentnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/baoliao_video_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/mutual_read_num_img"
+                android:drawablePadding="5dp"
+                android:text=" 99"
+                android:textColor="@color/Text60GreyColor"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/baoliao_voice_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="14sp"
+                android:layout_toRightOf="@+id/baoliao_picture_count"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/baoliao_picture_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="14sp"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/baoliao_viedo_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/baoliao_voice_count"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/baoliao_comment_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/mutual_message_num_img"
+                android:drawablePadding="5dp"
+                android:text=" 99"
+                android:textColor="@color/Text60GreyColor"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/release_calss_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="分类"
+            android:textColor="@color/common_color"
+            android:textSize="14dip"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/tv_channle_rgBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="28dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/tvshow_tab_bg_1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/tv_channle_rgBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/radio_left_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="频道直播"
+            android:textColor="@drawable/color_radiobutton"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/tv_channle_rgBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:padding="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_mid_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="节目点播"
+            android:textColor="@drawable/color_radiobutton"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/tv_channle_rgBtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/radio_right_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="网络直播"
+            android:textColor="@drawable/color_radiobutton"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/title_splite_color" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

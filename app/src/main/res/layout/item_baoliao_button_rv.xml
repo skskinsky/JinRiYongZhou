@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="92dp"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/mLogoIv"
+        android:layout_width="72dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/mTitleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="标题"
+        android:textColor="@color/black"
+        android:textSize="13dp"/>
+
+
+</LinearLayout>

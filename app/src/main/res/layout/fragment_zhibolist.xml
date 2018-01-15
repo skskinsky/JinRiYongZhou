@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/details_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/zhiboincludetop"
+        layout="@layout/my_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical">
+
+        <com.dingtai.base.pullrefresh.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/zhibo_pulllistview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:scrollbars="none"
+            ptr:ptrHeaderTextColor="#666666"
+            ptr:ptrMode="both">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="14px"
+                    android:background="@null" />
+
+                <com.dingtai.base.view.MyListView
+                    android:id="@+id/listviewzhibo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:fadingEdge="none"
+                    android:listSelector="#00ffffff"
+                    android:scrollbars="none"
+                    android:scrollingCache="false"></com.dingtai.base.view.MyListView>
+            </LinearLayout>
+        </com.dingtai.base.pullrefresh.PullToRefreshScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:background="#e3f7f7f7"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/setting_underline" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="1px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:padding="1px">
+
+                <ImageButton
+                    android:id="@+id/btn_news_return"
+                    android:layout_width="45dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_vertical|left"
+                    android:background="@null"
+                    android:padding="15dp"
+                    android:src="@drawable/dt_standard_index_nav_back"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/pinglun_shape"
+                android:gravity="center_vertical|right"
+                android:padding="1px">
+
+                <EditText
+                    android:id="@+id/txt_pinglun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/pinluntubiao"
+                    android:editable="false"
+                    android:text=" 评论"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

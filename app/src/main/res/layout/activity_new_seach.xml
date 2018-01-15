@@ -1,0 +1,171 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:f="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_seach"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:text="取消"
+            android:textColor="@color/TextBlackColor"
+            android:textSize="16sp" />
+
+        <include
+            android:id="@+id/includetop"
+            layout="@layout/activity_serch_view"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/tv_seach"
+            android:gravity="center_vertical" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_seach"
+            android:background="@drawable/new_seach_bg"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/dt_standard_shouye_sousuo1" />
+
+            <EditText
+                android:id="@+id/etsearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@null"
+                android:imeOptions="actionSearch"
+                android:singleLine="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/title_splite_color" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/home_bg_color"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/dt_standard_index_news_bg"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/home_bg_color"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="搜索记录"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/bt_search_clean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="清空"
+                    android:textColor="@color/item_splite_color"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/title_splite_color" />
+
+            <com.dingtai.base.view.TagListView
+                android:id="@+id/tagview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/news_detail_font_size_small"
+                android:paddingLeft="@dimen/news_detail_font_size_small"
+                android:paddingRight="@dimen/news_detail_font_size_small"
+                android:paddingTop="16.0dip"
+                f:horizontalSpacing="8dp"
+                f:orientation="horizontal"
+                f:verticalSpacing="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/item_bg_color"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.dingtai.base.pullrefresh.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/search_pulllistview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/headview_splite_color"
+                android:scrollbars="none"
+                ptr:ptrHeaderTextColor="#666666"
+                ptr:ptrMode="both">
+
+                <com.dingtai.base.view.MyListView
+                    android:id="@+id/listviewsearch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@color/ad_splite_color"
+                    android:dividerHeight="1px"
+                    android:fadingEdge="none"
+                    android:listSelector="#00ffffff"
+                    android:scrollbars="none"
+                    android:scrollingCache="false"></com.dingtai.base.view.MyListView>
+            </com.dingtai.base.pullrefresh.PullToRefreshScrollView>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

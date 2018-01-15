@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llNewsBanner1"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="180dp" >
+
+            <ImageView
+                android:id="@+id/imgBanner"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:adjustViewBounds="true"
+                />
+
+
+
+            <ImageView
+                android:id="@+id/img_play"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/zhibo_play"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    <com.dingtai.base.view.BaseTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="标题12345"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:orientation="vertical"
+             >
+
+            <RelativeLayout
+                android:id="@+id/rl_Relative"
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_margin="10dp" >
+
+                <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/tvSubscript"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="角标"
+                    android:textColor="#6481C7"
+                    android:textSize="@dimen/index_subscript_size" />
+
+                <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/tvCommunity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/new_community"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="沱江社区"
+                    android:textColor="#175de6"
+                    android:textSize="@dimen/index_subscript_size"
+                    android:visibility="gone" />
+
+                <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/txtypeStyle8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="7dp"
+                    android:gravity="center"
+                    android:text="角标"
+                    android:textColor="@color/item_zhibo"
+                    android:textSize="@dimen/index_subscript_size"
+                    android:visibility="gone" />
+
+                <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/tvZan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/txtypeStyle8"
+                    android:drawableLeft="@drawable/list_dianzan"
+                    android:gravity="center_vertical"
+                    android:text="  99"
+                    android:textColor="@color/common_list_titlebar_fu_font"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/tvReply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/tvZan"
+                    android:drawableLeft="@drawable/circle_yuedu"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:text="99"
+                    android:textColor="@color/common_list_titlebar_fu_font"
+                    android:textSize="@dimen/index_subscript_size" />
+
+                <com.dingtai.base.view.BaseTextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/tvReply"
+                    android:drawableLeft="@drawable/dt_standard_goods_goodsdetail_leftdaysimg"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:text="5分钟前"
+                    android:textColor="@color/common_list_titlebar_fu_font"
+                    android:textSize="@dimen/index_subscript_size" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/item_splite_color" />
+        
+</LinearLayout>
